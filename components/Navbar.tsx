@@ -24,7 +24,7 @@ const Navbar = () => {
               href="#"
               className="hover:opacity-80 transition-opacity duration-200"
             >
-              <Logo size="sm" variant="gradient" />
+              <Logo size="sm" />
             </a>
           </div>
 
@@ -46,19 +46,13 @@ const Navbar = () => {
               href="#product-spotlight"
               className="text-white/90 hover:text-white transition-all duration-200 font-medium text-sm tracking-wide hover:scale-105"
             >
-              Product
+              Approach
             </a>
             <a
               href="#pilot-case-study"
               className="text-white/90 hover:text-white transition-all duration-200 font-medium text-sm tracking-wide hover:scale-105"
             >
-              Pilot
-            </a>
-            <a
-              href="#milestones"
-              className="text-white/90 hover:text-white transition-all duration-200 font-medium text-sm tracking-wide hover:scale-105"
-            >
-              Roadmap
+              Case Studies
             </a>
           </div>
 
@@ -118,21 +112,14 @@ const Navbar = () => {
                 onClick={closeMobileMenu}
                 className="block text-white/90 hover:text-white transition-colors duration-200 font-medium text-base py-2"
               >
-                Product
+                Approach
               </a>
               <a
                 href="#pilot-case-study"
                 onClick={closeMobileMenu}
                 className="block text-white/90 hover:text-white transition-colors duration-200 font-medium text-base py-2"
               >
-                Pilot
-              </a>
-              <a
-                href="#milestones"
-                onClick={closeMobileMenu}
-                className="block text-white/90 hover:text-white transition-colors duration-200 font-medium text-base py-2"
-              >
-                Roadmap
+                Case Studies
               </a>
             </div>
           </div>

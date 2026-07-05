@@ -18,9 +18,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Temporai - AI-Powered DeFi Portfolio Management",
+  title: "Tempor-ai — AI & Agent Consultancy",
   description:
-    "Build safer, explainable DeFi portfolios with AI. DR HIRO plans, you confirm, NEAR Intents executes—backed by a full audit trail.",
+    "Independent AI and agent consulting for web3 and traditional companies. You set the goal, I build the agents, you ship faster.",
 };
 
 export default function RootLayout({

@@ -1,24 +1,27 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Target, Clock, CheckCircle, FileText } from "lucide-react";
+import { Target } from "lucide-react";
 import SectionHeading from "./shared/SectionHeading";
 
-const highlights = [
+const caseStudies = [
   {
-    icon: Clock,
-    title: "Plan time < 5 seconds",
-    description: "Lightning-fast portfolio planning and analysis",
+    name: "DR HIRO",
+    tag: "DeFi copilot",
+    description:
+      "A 6-agent AI copilot for DeFi portfolio execution — turning investing intent into continuous, controlled, on-chain action with a full audit trail.",
   },
   {
-    icon: CheckCircle,
-    title: "≥3 rationale bullets + alternatives",
-    description: "Comprehensive decision-making transparency",
+    name: "0Gora",
+    tag: "Verifiable RAG",
+    description:
+      "A verifiable RAG chatbot — knowledge you (and your AI agents) can actually trust — shipped and live in production.",
   },
   {
-    icon: FileText,
-    title: "End‑to‑end log captured",
-    description: "Complete audit trail of plan, confirm, intent",
+    name: "NodeAI",
+    tag: "Agent framework",
+    description:
+      "An agent framework for teams that need to build their own agents, not just use someone else's — with A2A/MCP support out of the box.",
   },
 ];
 
@@ -50,84 +53,45 @@ export function PilotCaseStudySection() {
 
       <div className="page-container">
         <SectionHeading
-          tag="Pilot Case Study"
-          title="From goal to execution—explainable at every step"
-          subTitle="A realistic DR HIRO co‑pilot run."
+          tag="Proof of Work"
+          title="A few things I've built"
+          subTitle="Production systems, not slideware."
         />
 
         <div className="mt-16 max-w-6xl mx-auto">
-          {/* Scenario Section */}
-          <motion.div
-            className="mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <div className="bg-black border border-white/10 rounded-xl p-8 hover:border-white/20 transition-all duration-300">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center">
-                  <Target className="w-6 h-6 text-[#3B82F6]" />
-                </div>
-                <h3 className="text-2xl font-bold text-white">Scenario</h3>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {caseStudies.map((project, index) => (
+              <motion.div
+                key={project.name}
+                className="group relative p-8 rounded-xl border border-white/10 bg-black/50 hover:border-white/20 transition-all duration-300 hover:bg-white/5"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="opacity-0 group-hover:opacity-100 transition duration-300 absolute inset-0 h-full w-full bg-gradient-to-br from-white/5 to-transparent pointer-events-none rounded-xl" />
 
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#3B82F6] mt-2" />
-                  <p className="text-sm text-secondary-foreground leading-relaxed">
-                    <strong className="text-white">Goal (PLI):</strong> 75%
-                    liquid / 25% vaults; 25% per‑protocol cap.
-                  </p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#3B82F6] mt-2" />
-                  <p className="text-sm text-secondary-foreground leading-relaxed">
-                    DR HIRO produced a deterministic plan with rationale and
-                    alternatives, logged confirmation, then executed.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Highlights Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">
-              Highlights
-            </h3>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {highlights.map((highlight) => (
-                <motion.div
-                  key={highlight.title}
-                  className="group relative p-6 rounded-xl border border-white/10 bg-black/50 hover:border-white/20 transition-all duration-300 hover:bg-white/5"
-                  whileHover={{ scale: 1.01 }}
-                >
-                  <div className="opacity-0 group-hover:opacity-100 transition duration-300 absolute inset-0 h-full w-full bg-gradient-to-br from-white/5 to-transparent pointer-events-none rounded-xl" />
-
-                  <div className="relative z-10 text-center">
-                    <div className="w-16 h-16 rounded-xl bg-white/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
-                      <highlight.icon className="w-8 h-8 text-[#3B82F6]" />
-                    </div>
-
-                    <h4 className="text-lg font-bold text-white mb-3 group-hover:text-[#3B82F6] transition-colors duration-300">
-                      {highlight.title}
-                    </h4>
-
-                    <p className="text-sm text-secondary-foreground leading-relaxed">
-                      {highlight.description}
-                    </p>
+                <div className="relative z-10">
+                  <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mb-6">
+                    <Target className="w-6 h-6 text-[#3B82F6]" />
                   </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+
+                  <div className="flex items-center gap-3 mb-3">
+                    <h3 className="text-xl font-bold text-white">
+                      {project.name}
+                    </h3>
+                    <span className="text-xs font-medium text-[#3B82F6] bg-[#3B82F6]/10 px-3 py-1 rounded-full">
+                      {project.tag}
+                    </span>
+                  </div>
+
+                  <p className="text-sm text-secondary-foreground leading-relaxed">
+                    {project.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </motion.section>

@@ -24,7 +24,7 @@ export default function Hero() {
                 className="text-center mb-4 sm:mb-6"
               >
                 <span className="text-xs sm:text-sm font-medium tracking-wider uppercase">
-                  DR HIRO — Stablecoin Yield Co‑pilot
+                  Tempor-ai — AI &amp; Agent Consultancy
                 </span>
               </motion.div>
               <motion.h1
@@ -33,7 +33,7 @@ export default function Hero() {
                 transition={{ duration: 1, ease: "easeInOut" }}
                 className="gradient-heading mb-6 sm:mb-8"
               >
-                Build safer, explainable DeFi portfolios with AI
+                Make your company AI‑native
               </motion.h1>
             </div>
             <motion.p
@@ -42,8 +42,8 @@ export default function Hero() {
               transition={{ duration: 1.1, ease: "easeInOut" }}
               className="mx-auto max-w-2xl px-4 sm:px-8 text-center text-base sm:text-lg md:text-xl font-normal leading-relaxed tracking-[-0.2px] text-secondary-foreground mb-8 sm:mb-12"
             >
-              You set the goal. We plan. You confirm. Grow your capital with
-              full audit trail.
+              You set the goal. I build the agents. You ship faster — with a
+              clear plan and a clear record.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -51,7 +51,18 @@ export default function Hero() {
               transition={{ duration: 2, ease: "backInOut" }}
               className="w-full max-w-2xl px-4"
             >
-              <CTAPair />
+              <CTAPair
+                primaryTitle="Book a call"
+                secondaryTitle="See the work"
+                primaryOnClick={() =>
+                  (window.location.href = "mailto:kevin@tempor.ai")
+                }
+                secondaryOnClick={() =>
+                  document
+                    .getElementById("pilot-case-study")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              />
             </motion.div>
           </section>
         </div>

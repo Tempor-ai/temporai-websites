@@ -7,25 +7,25 @@ import SectionHeading from "./shared/SectionHeading";
 
 const features = [
   {
-    title: "Portfolio‑Level Intents",
-    description: "Outcome‑based planning at the portfolio level.",
+    title: "Outcome‑based engagements",
+    description: "Outcome‑based planning, not hourly micromanagement.",
     icon: <Target />,
   },
   {
     title: "Explainable by design",
-    description: "Rationale bullets; deterministic replay for verification.",
+    description: "Clear rationale; documented decisions for verification.",
     icon: <Eye />,
   },
   {
-    title: "Human‑in‑the‑loop safety",
+    title: "Human‑in‑the‑loop delivery",
     description:
-      "Confirm before execution; caps and allow/deny lists enforce policy.",
+      "Confirm before anything ships; scope and budget caps enforce the plan.",
     icon: <Shield />,
   },
   {
-    title: "Verifiable execution path",
+    title: "Proven execution path",
     description:
-      "NEAR Intents today; roadmap to Shade TEE‑backed custody/signing.",
+      "Built on real production systems — a DeFi copilot, a verifiable RAG platform, and an agent framework.",
     icon: <CheckCircle />,
   },
 ];
@@ -42,8 +42,8 @@ export function FeaturesSectionContainer() {
     >
       <SectionHeading
         tag="Why We're Different"
-        title="Why Temporai?"
-        subTitle="Four pillars that make AI‑assisted DeFi practical."
+        title="Why Tempor-ai?"
+        subTitle="Four pillars that make AI‑assisted delivery practical."
       />
       <div className="absolute bottom-0 -z-10 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] [background-size:6rem_4rem]"></div>
       <motion.div
