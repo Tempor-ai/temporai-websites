@@ -21,7 +21,7 @@ const Logo = ({ className = "", size = "md" }: LogoProps) => {
     >
       <Image
         src="/logo.jpg"
-        alt="Tempor-ai"
+        alt="Temporai Solutions"
         width={300}
         height={100}
         className={`w-auto ${heightClasses[size]}`}

@@ -18,9 +18,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Tempor-ai — AI & Agent Consultancy",
+  title: "Temporai Solutions — AI Dev Shop",
   description:
-    "Independent AI and agent consulting for web3 and traditional companies. You set the goal, I build the agents, you ship faster.",
+    "Become AI-native. Unleash your AI potential — independent AI and agent consulting for web3 and traditional companies.",
 };
 
 export default function RootLayout({

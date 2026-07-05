@@ -29,7 +29,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-16 pt-8 border-t border-white/10">
           <p className="text-xs text-secondary-foreground text-center">
-            © 2025 Tempor-ai
+            © 2025 Temporai Solutions
           </p>
         </div>
       </div>

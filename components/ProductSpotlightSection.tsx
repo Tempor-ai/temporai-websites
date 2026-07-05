@@ -89,7 +89,7 @@ export function ProductSpotlightSection() {
       <div className="page-container">
         <SectionHeading
           tag="Product Spotlight"
-          title="Tempor-ai — AI &amp; Agent Consulting"
+          title="Temporai Solutions — AI Dev Shop"
           subTitle="Plan + confirm; then I ship it."
         />
 

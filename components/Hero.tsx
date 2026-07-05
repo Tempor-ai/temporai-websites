@@ -24,7 +24,7 @@ export default function Hero() {
                 className="text-center mb-4 sm:mb-6"
               >
                 <span className="text-xs sm:text-sm font-medium tracking-wider uppercase">
-                  Tempor-ai — AI &amp; Agent Consultancy
+                  Temporai Solutions — AI Dev Shop
                 </span>
               </motion.div>
               <motion.h1
@@ -33,7 +33,7 @@ export default function Hero() {
                 transition={{ duration: 1, ease: "easeInOut" }}
                 className="gradient-heading mb-6 sm:mb-8"
               >
-                Make your company AI‑native
+                Become AI‑Native
               </motion.h1>
             </div>
             <motion.p
@@ -42,8 +42,8 @@ export default function Hero() {
               transition={{ duration: 1.1, ease: "easeInOut" }}
               className="mx-auto max-w-2xl px-4 sm:px-8 text-center text-base sm:text-lg md:text-xl font-normal leading-relaxed tracking-[-0.2px] text-secondary-foreground mb-8 sm:mb-12"
             >
-              You set the goal. I build the agents. You ship faster — with a
-              clear plan and a clear record.
+              Unleash your AI potential. You set the goal, I build the
+              agents, you ship faster — with a clear plan and a clear record.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
