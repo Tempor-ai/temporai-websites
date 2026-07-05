@@ -10,16 +10,26 @@ const Footer = () => {
         {/* CTA Section */}
         <SectionHeading
           tag=""
-          title="Safer DeFi, with explainable AI"
-          subTitle="DR HIRO plans, you confirm, NEAR Intents executes—backed by a full audit trail."
+          title="Ready to make your team more AI-native?"
+          subTitle="Let's figure out your AI roadmap — book a call or send me an email."
         />
 
-        <CTAPair className="mt-8" />
+        <CTAPair
+          className="mt-8"
+          primaryTitle="Book a call"
+          secondaryTitle="Email me"
+          primaryOnClick={() =>
+            (window.location.href = "mailto:kevin@tempor.ai")
+          }
+          secondaryOnClick={() =>
+            (window.location.href = "mailto:kevin@tempor.ai")
+          }
+        />
 
         {/* Copyright */}
         <div className="mt-16 pt-8 border-t border-white/10">
           <p className="text-xs text-secondary-foreground text-center">
-            © 2025 Temporai
+            © 2025 Temporai Solutions
           </p>
         </div>
       </div>

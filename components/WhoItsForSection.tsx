@@ -1,21 +1,30 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Zap, Users } from "lucide-react";
+import { Zap, Building2, Landmark } from "lucide-react";
 import SectionHeading from "./shared/SectionHeading";
 
 const userGroups = [
   {
-    title: "DeFi power users",
-    subtitle: "Hardos",
-    description: "smart‑beta/alpha knobs within guardrails",
+    title: "Web3 & crypto companies",
+    subtitle: "Technical teams",
+    description:
+      "Your protocol is technical. Your ops don't have to be manual — agents for trading, DeFi, and protocol operations.",
     icon: Zap,
   },
   {
-    title: "Web2 investors",
-    subtitle: "Normies",
-    description: "default smart‑beta, clear reports, explainable plans",
-    icon: Users,
+    title: "Traditional companies",
+    subtitle: "Not AI-native yet",
+    description:
+      "AI-native isn't just for tech companies — practical automation and workflow AI without needing a research team.",
+    icon: Building2,
+  },
+  {
+    title: "DC & policy-adjacent orgs",
+    subtitle: "Credibility-first",
+    description:
+      "Serious problems need credible AI partners — measured engagement, clear scoping, security-conscious delivery.",
+    icon: Landmark,
   },
 ];
 
@@ -49,11 +58,11 @@ export function WhoItsForSection() {
         <SectionHeading
           tag="WHO IT'S FOR"
           title="Who it's for"
-          subTitle="Designed for both DeFi experts and traditional investors."
+          subTitle="Designed for web3 teams and traditional companies alike."
         />
 
-        <div className="mt-16 max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="mt-16 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {userGroups.map((group, index) => (
               <motion.div
                 key={group.title}

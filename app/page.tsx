@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import { GlowingEffectContainer } from "@/components/GlowingEffectContainer";
 import Hero from "@/components/Hero";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
-import { MilestonesSection } from "@/components/MilestonesSection";
 import Navbar from "@/components/Navbar";
 import { PilotCaseStudySection } from "@/components/PilotCaseStudySection";
 import { ProductSpotlightSection } from "@/components/ProductSpotlightSection";
@@ -22,7 +21,6 @@ export default function Home() {
         <FeaturesSectionContainer />
         <TrustSafetySection />
         <PilotCaseStudySection />
-        <MilestonesSection />
         <WhoItsForSection />
         <Footer />
       </main>

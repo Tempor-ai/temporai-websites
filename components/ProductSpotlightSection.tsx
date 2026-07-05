@@ -36,15 +36,15 @@ const featureVariants: Variants = {
 const features = [
   {
     icon: Target,
-    title: "PLI: portfolio targets, not token toggles",
+    title: "Outcome‑based engagements, not hourly toggles",
     description:
-      "Set high-level portfolio objectives instead of micromanaging individual tokens",
+      "Set high-level goals instead of micromanaging individual tasks or tickets",
   },
   {
     icon: Shield,
-    title: "Risk caps and liquidity controls",
+    title: "Scoped budget and timeline caps",
     description:
-      "Built-in safeguards to protect your capital and ensure liquidity when needed",
+      "Clear guardrails on scope, budget, and timeline agreed before work starts",
   },
   {
     icon: Eye,
@@ -54,9 +54,9 @@ const features = [
   },
   {
     icon: FileText,
-    title: "File‑first audit log of plan, confirm, and execution",
+    title: "Documented handoff of plan, decisions, and delivery",
     description:
-      "Complete transparency with immutable logs of every action taken",
+      "Complete transparency with a clear record of every step taken",
   },
 ];
 
@@ -89,8 +89,8 @@ export function ProductSpotlightSection() {
       <div className="page-container">
         <SectionHeading
           tag="Product Spotlight"
-          title="DR HIRO — Stablecoin Yield Co‑pilot"
-          subTitle="Plan + confirm; 1-click cross‑chain execution."
+          title="Temporai Solutions — AI Dev Shop"
+          subTitle="Plan + confirm; then I ship it."
         />
 
         <div className="mt-16 max-w-5xl mx-auto">
@@ -142,11 +142,11 @@ export function ProductSpotlightSection() {
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold text-amber-200 mb-2">
-                    Note: No unsupervised autonomy by default
+                    Note: Nothing ships without your review
                   </h4>
                   <p className="text-sm text-amber-100/80 leading-relaxed">
-                    Optional autonomy requires explicit guardrails and
-                    approvals.
+                    Every deliverable is reviewed and approved by you before
+                    it goes live.
                   </p>
                 </div>
               </div>

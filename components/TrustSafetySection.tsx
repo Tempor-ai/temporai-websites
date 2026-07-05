@@ -8,27 +8,26 @@ const features = [
   {
     title: "Safety & controls",
     items: [
-      "Human confirm by default",
-      "Position/notional caps and protocol risk limits",
-      "Allowlist/denylist by venue and asset",
-      "Pre‑trade checklist: data freshness, plan consistency, policy checks",
-      "Regime‑aware triggers: de‑risk or pause on stress signals (e.g., depegs/liquidity)",
+      "Human sign‑off before anything ships",
+      "Scope, budget, and timeline caps agreed up front",
+      "No runaway engagements — changes in scope are called out and re‑confirmed",
+      "Pre‑ship checklist: does it meet the goal, is it documented, is it handed off cleanly",
     ],
     icon: Shield,
   },
   {
     title: "Observability",
     items: [
-      "Full audit trail with inputs/outputs/timestamps",
-      "Deterministic plan replay",
+      "Full record of decisions, inputs, and outputs",
+      "Regular progress updates, not a black box",
     ],
     icon: Eye,
   },
   {
-    title: "Roadmap",
+    title: "What's next",
     items: [
-      "Shade TEEs for custody/signing & attestable actions",
-      "Self‑hosted inference option for cost/privacy",
+      "Expanding into more industries as the practice grows",
+      "Self‑hosted / privacy‑first options for teams that need them",
     ],
     icon: Server,
   },
@@ -62,9 +61,9 @@ export function TrustSafetySection() {
 
       <div className="page-container">
         <SectionHeading
-          tag="TRUST & SAFETY"
-          title="Controls, observability, and a verifiable roadmap"
-          subTitle="Transparency and safer operations from day one."
+          tag="HOW I WORK"
+          title="Clear scope, clear communication, no surprises"
+          subTitle="Transparency and safer delivery from day one."
         />
 
         <div className="grid my-8 grid-cols-1 md:grid-cols-3 relative z-10 py-10 max-w-6xl mx-auto">

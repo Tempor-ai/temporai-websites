@@ -37,28 +37,29 @@ const steps = [
   {
     number: "1",
     title: "Tell your goal",
-    description: "Amount, risk level, liquidity needs, caps, exclusions.",
+    description:
+      "Current bottlenecks, what \"AI‑native\" would mean for your team, constraints and priorities.",
     icon: MessageSquare,
   },
   {
     number: "2",
     title: "Plan",
     description:
-      "DR HIRO proposes a portfolio with ≥3 rationale bullets, sensible alternatives, and risk/liq checks.",
+      "I propose a scoped roadmap with rationale, sensible alternatives, and a realistic timeline.",
     icon: Brain,
   },
   {
     number: "3",
     title: "Confirm",
     description:
-      "Approve or adjust; your decision is written to a file‑first audit log for deterministic replay.",
+      "Approve or adjust; scope and budget are agreed before anything gets built.",
     icon: CheckCircle,
   },
   {
     number: "4",
     title: "Execute",
     description:
-      "Agents performs swaps, bridges, and allocations; you receive a human‑readable report.",
+      "I build and ship the agents/automation; you receive a clear handoff report.",
     icon: Zap,
   },
 ];

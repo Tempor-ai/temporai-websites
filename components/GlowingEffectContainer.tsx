@@ -23,7 +23,7 @@ export function GlowingEffectContainer() {
         <SectionHeading
           tag="What you get"
           title="What you get"
-          subTitle="An AI co‑pilot that plans, explains, and executes under guardrails."
+          subTitle="An AI partner that plans, explains, and ships under guardrails."
         />
         <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2 ">
           <GridItem
@@ -31,15 +31,15 @@ export function GlowingEffectContainer() {
             icon={
               <MessageSquare className="h-4 w-4 text-black dark:text-neutral-400" />
             }
-            title="Conversational planning"
-            description='Tell us your goal in plain English: "75% liquid / 25% vaults; cap per‑protocol at 25%."'
+            title="Discovery conversation"
+            description='Tell me your goal in plain English: "cut our support backlog by half" or "ship an internal research agent."'
           />
 
           <GridItem
             area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
             icon={<Bot className="h-4 w-4 text-black dark:text-neutral-400" />}
-            title="Co‑pilot execution"
-            description="Plan → confirm → 1‑click execution. Optional autonomy under explicit caps."
+            title="Build &amp; handoff"
+            description="Plan → confirm → build. You get working software and a clear handoff, not just a slide deck."
           />
 
           <GridItem
@@ -47,15 +47,15 @@ export function GlowingEffectContainer() {
             icon={
               <Target className="h-4 w-4 text-black dark:text-neutral-400" />
             }
-            title="Portfolio‑Level Intents (PLI)"
-            description="Set portfolio targets and constraints—no per‑swap micromanagement."
+            title="Outcome‑based engagements"
+            description="Set the outcome and constraints—no per‑task micromanagement."
           />
 
           <GridItem
             area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
             icon={<Eye className="h-4 w-4 text-black dark:text-neutral-400" />}
             title="Explainability"
-            description="Clear rationale bullets and alternatives; every step logged and replayable."
+            description="Clear rationale and alternatives; every decision documented and reviewable."
           />
 
           <GridItem
@@ -63,8 +63,8 @@ export function GlowingEffectContainer() {
             icon={
               <Share className="h-4 w-4 text-black dark:text-neutral-400" />
             }
-            title="Cross-chain"
-            description="Bridge, swap, and allocate across chains."
+            title="Works across your stack"
+            description="Integrates with the tools and teams you already have."
           />
 
           <GridItem
@@ -73,7 +73,7 @@ export function GlowingEffectContainer() {
               <Layers className="h-4 w-4 text-black dark:text-neutral-400" />
             }
             title="Built to expand"
-            description="Start with stablecoins; extend to RWAs as"
+            description="Start with one automation; extend into a full agent platform as you grow."
           />
         </ul>
       </div>
