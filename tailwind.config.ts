@@ -1,52 +1,74 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: ["class"],
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        "tem-dark-1": "#0B1524",
-        "tem-dark-2": "#142536",
-        "tem-dark-3": "#1C3244",
-        "tem-accent": "#13C7C4",
-        "tem-accent-soft": "#55D5D1",
-        "tem-accent-deep": "#267B87",
-        "tem-neutral-light": "#E1E7EA",
-        "tem-neutral-muted": "#8DA7B3",
-        "tem-cream": {
-          50: "#FAF9F7",
-          100: "#F5F3F0",
-          200: "#E8E5DF",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        card: "var(--card)",
+        "card-foreground": "var(--card-foreground)",
+        popover: "var(--popover)",
+        "popover-foreground": "var(--popover-foreground)",
+        primary: "var(--primary)",
+        "primary-foreground": "var(--primary-foreground)",
+        secondary: "var(--secondary)",
+        "secondary-foreground": "var(--secondary-foreground)",
+        muted: "var(--muted)",
+        "muted-foreground": "var(--muted-foreground)",
+        accent: "var(--accent)",
+        "accent-foreground": "var(--accent-foreground)",
+        destructive: "var(--destructive)",
+        border: "var(--border)",
+        input: "var(--input)",
+        ring: "var(--ring)",
+        chart: {
+          "1": "var(--chart-1)",
+          "2": "var(--chart-2)",
+          "3": "var(--chart-3)",
+          "4": "var(--chart-4)",
+          "5": "var(--chart-5)",
         },
-        "tem-grey": {
-          50: "#F7F8F9",
-          100: "#E8EAED",
-          200: "#D1D5DB",
+        sidebar: {
+          DEFAULT: "var(--sidebar)",
+          foreground: "var(--sidebar-foreground)",
+          primary: "var(--sidebar-primary)",
+          "primary-foreground": "var(--sidebar-primary-foreground)",
+          accent: "var(--sidebar-accent)",
+          "accent-foreground": "var(--sidebar-accent-foreground)",
+          border: "var(--sidebar-border)",
+          ring: "var(--sidebar-ring)",
         },
       },
       fontFamily: {
-        sans: ["var(--font-plus-jakarta)", "system-ui", "sans-serif"],
-        mono: ["var(--font-ibm-plex-mono)", "monospace"],
-      },
-      backgroundImage: {
-        "tem-hero": "linear-gradient(135deg,#0B1524 0%,#142536 60%,#1C3244 100%)",
-        "tem-light": "linear-gradient(180deg,#E1E7EA,#FFFFFF)",
-        "tem-accent-gradient": "linear-gradient(90deg,#13C7C4,#55D5D1)",
-      },
-      boxShadow: {
-        "tem-glow": "0 0 40px rgba(19,199,196,0.45)",
+        sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-geist-mono)", "monospace"],
       },
       borderRadius: {
-        "xl2": "1.25rem",
+        sm: "calc(var(--radius) - 4px)",
+        md: "calc(var(--radius) - 2px)",
+        lg: "var(--radius)",
+        xl: "calc(var(--radius) + 4px)",
+      },
+      keyframes: {
+        spotlight: {
+          "0%": { opacity: "0", transform: "translate(-72%, -62%) scale(0.5)" },
+          "100%": { opacity: "1", transform: "translate(-50%, -40%) scale(1)" },
+        },
+        spin: {
+          to: { transform: "rotate(360deg)" },
+        },
+      },
+      animation: {
+        spotlight: "spotlight 2s ease 0.75s 1 forwards",
       },
     },
   },
   plugins: [],
 };
 export default config;
-
-
