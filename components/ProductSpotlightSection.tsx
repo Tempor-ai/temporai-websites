@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, Variants } from "motion/react";
-import { cn } from "@/lib/utils";
 import { Target, Shield, Eye, FileText, AlertCircle } from "lucide-react";
 import SectionHeading from "./shared/SectionHeading";
 
@@ -101,7 +100,7 @@ export function ProductSpotlightSection() {
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {features.map((feature, index) => (
+              {features.map((feature) => (
                 <motion.div
                   key={feature.title}
                   variants={featureVariants}
