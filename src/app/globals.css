@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-plus-jakarta: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-ibm-plex-mono: 'IBM Plex Mono', monospace;
+  --tem-dark-1: #0B1524;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    background-color: var(--tem-dark-1);
+    @apply text-white font-sans;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight font-sans;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight font-sans;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold tracking-tight font-sans;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl font-semibold font-sans;
+  }
+
+  p {
+    @apply text-base md:text-lg leading-relaxed font-sans;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes nm-aurora-shift {
+  0% { 
+    transform: translate3d(-10%, -8%, 0) scale(1); 
+    opacity: 0.65; 
+  }
+  50% { 
+    transform: translate3d(4%, 6%, 0) scale(1.05); 
+    opacity: 0.8; 
+  }
+  100% { 
+    transform: translate3d(-10%, -8%, 0) scale(1); 
+    opacity: 0.65; 
+  }
+}
+
+@keyframes nm-arrow-move {
+  0% { offset-distance: 0%; opacity: 0; }
+  5% { opacity: 0.6; }
+  95% { opacity: 0.6; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+
+.nm-aurora-bg {
+  background:
+    radial-gradient(circle at 40% 20%, #d4f4ee 0%, #c9eee5 40%, transparent 70%),
+    radial-gradient(circle at 70% 70%, #daf96c 0%, #c9eee5 40%, transparent 80%);
+  filter: blur(60px);
+  animation: nm-aurora-shift 24s ease-in-out infinite;
+  opacity: 1 !important;
+}
+
+.nm-arrow {
+  fill: #8DA7B3;
+  opacity: 0.5;
+  animation: nm-arrow-move 8s ease-in-out infinite;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+}
+
+.marquee:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+/* Typewriter cursor blink animation */
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+
