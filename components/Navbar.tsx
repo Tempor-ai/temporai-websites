@@ -15,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-xl border-b border-white/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#22303F]/10 shadow-sm">
       <div className="page-container">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -32,25 +32,25 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-10">
             <a
               href="#features"
-              className="text-white/90 hover:text-white transition-all duration-200 font-medium text-sm tracking-wide hover:scale-105"
+              className="text-[#22303F]/80 hover:text-[#22303F] transition-all duration-200 font-medium text-sm tracking-wide hover:scale-105"
             >
               Features
             </a>
             <a
               href="#how-it-works"
-              className="text-white/90 hover:text-white transition-all duration-200 font-medium text-sm tracking-wide hover:scale-105"
+              className="text-[#22303F]/80 hover:text-[#22303F] transition-all duration-200 font-medium text-sm tracking-wide hover:scale-105"
             >
               How it Works
             </a>
             <a
               href="#product-spotlight"
-              className="text-white/90 hover:text-white transition-all duration-200 font-medium text-sm tracking-wide hover:scale-105"
+              className="text-[#22303F]/80 hover:text-[#22303F] transition-all duration-200 font-medium text-sm tracking-wide hover:scale-105"
             >
               Approach
             </a>
             <a
               href="#pilot-case-study"
-              className="text-white/90 hover:text-white transition-all duration-200 font-medium text-sm tracking-wide hover:scale-105"
+              className="text-[#22303F]/80 hover:text-[#22303F] transition-all duration-200 font-medium text-sm tracking-wide hover:scale-105"
             >
               Case Studies
             </a>
@@ -60,7 +60,7 @@ const Navbar = () => {
           <div className="lg:hidden">
             <button
               onClick={toggleMobileMenu}
-              className="text-white/90 hover:text-white transition-colors duration-200 p-2"
+              className="text-[#22303F]/80 hover:text-[#22303F] transition-colors duration-200 p-2"
               aria-label="Toggle mobile menu"
             >
               <svg
@@ -91,33 +91,33 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border-b border-white/20">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-xl border-b border-[#22303F]/10">
             <div className="px-4 py-6 space-y-4">
               <a
                 href="#features"
                 onClick={closeMobileMenu}
-                className="block text-white/90 hover:text-white transition-colors duration-200 font-medium text-base py-2"
+                className="block text-[#22303F]/80 hover:text-[#22303F] transition-colors duration-200 font-medium text-base py-2"
               >
                 Features
               </a>
               <a
                 href="#how-it-works"
                 onClick={closeMobileMenu}
-                className="block text-white/90 hover:text-white transition-colors duration-200 font-medium text-base py-2"
+                className="block text-[#22303F]/80 hover:text-[#22303F] transition-colors duration-200 font-medium text-base py-2"
               >
                 How it Works
               </a>
               <a
                 href="#product-spotlight"
                 onClick={closeMobileMenu}
-                className="block text-white/90 hover:text-white transition-colors duration-200 font-medium text-base py-2"
+                className="block text-[#22303F]/80 hover:text-[#22303F] transition-colors duration-200 font-medium text-base py-2"
               >
                 Approach
               </a>
               <a
                 href="#pilot-case-study"
                 onClick={closeMobileMenu}
-                className="block text-white/90 hover:text-white transition-colors duration-200 font-medium text-base py-2"
+                className="block text-[#22303F]/80 hover:text-[#22303F] transition-colors duration-200 font-medium text-base py-2"
               >
                 Case Studies
               </a>

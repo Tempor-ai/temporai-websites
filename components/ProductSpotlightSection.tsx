@@ -63,17 +63,17 @@ export function ProductSpotlightSection() {
   return (
     <motion.section
       id="product-spotlight"
-      className="relative h-full w-full overflow-hidden bg-black py-20 scroll-mt-20"
+      className="relative h-full w-full overflow-hidden py-20 scroll-mt-20"
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
     >
       {/* Background Effects */}
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgba(136,136,136,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(136,136,136,0.1)_1px,transparent_1px)] opacity-20 [background-size:6rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,transparent_70%,#000_110%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgba(76,102,138,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(76,102,138,0.1)_1px,transparent_1px)] opacity-20 [background-size:6rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,transparent_70%,#000_110%)]" />
 
       <motion.div
-        className="absolute right-[-120px] top-[-20%] h-[300px] w-[300px] rounded-full bg-[radial-gradient(circle_at_center,#3B82F6_20%,transparent_50%)] opacity-10 blur-3xl pointer-events-none z-[-1]"
+        className="absolute right-[-120px] top-[-20%] h-[300px] w-[300px] rounded-full bg-[radial-gradient(circle_at_center,#9984BD_20%,transparent_50%)] opacity-[0.12] blur-3xl pointer-events-none z-[-1]"
         animate={{
           y: [0, -5, 5, -3, 2, 0],
           x: [0, 2, -2, 1, -1, 0],
@@ -95,7 +95,7 @@ export function ProductSpotlightSection() {
         <div className="mt-16 max-w-5xl mx-auto">
           {/* Key Features Section */}
           <motion.div variants={featureVariants} className="mb-12">
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">
+            <h3 className="text-2xl font-bold text-[#22303F] mb-8 text-center">
               Key features
             </h3>
 
@@ -106,19 +106,19 @@ export function ProductSpotlightSection() {
                   variants={featureVariants}
                   className="group relative"
                 >
-                  <div className="relative p-6 rounded-xl border border-white/10 bg-black/50 hover:border-white/20 transition-all duration-300 hover:bg-white/5">
+                  <div className="relative p-6 rounded-xl border border-[#22303F]/10 bg-white/70 shadow-sm hover:border-[#4A90C2]/35 transition-all duration-300 hover:bg-white">
                     {/* Subtle glow effect */}
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/1 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[#4A90C2]/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                     <div className="relative z-10 flex items-start space-x-4">
                       {/* Icon */}
-                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-[#3B82F6] to-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-[#6CB2E3] to-[#9984BD] flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <feature.icon className="w-6 h-6 text-white" />
                       </div>
 
                       {/* Content */}
                       <div className="flex-1">
-                        <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#3B82F6] transition-colors duration-300">
+                        <h4 className="text-lg font-semibold text-[#22303F] mb-2 group-hover:text-[#4A90C2] transition-colors duration-300">
                           {feature.title}
                         </h4>
                         <p className="text-sm text-secondary-foreground leading-relaxed">
