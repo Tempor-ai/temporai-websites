@@ -16,11 +16,9 @@ const Logo = ({ className = "", size = "md" }: LogoProps) => {
   };
 
   return (
-    <div
-      className={`inline-flex items-center rounded-md bg-white px-2 py-1 ${className}`}
-    >
+    <div className={`inline-flex items-center ${className}`}>
       <Image
-        src="/logo.jpg"
+        src="/logo.png"
         alt="Temporai Solutions"
         width={300}
         height={100}

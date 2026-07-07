@@ -28,7 +28,7 @@ const CTAPair = ({
         className="relative inline-flex h-12 w-full sm:w-60 overflow-hidden rounded-lg p-[1px] focus:outline-none group"
       >
         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#6CB2E3_0%,#9984BD_50%,#6CB2E3_100%)]" />
-        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-gradient-to-r from-[#6CB2E3] to-[#9984BD] px-7 text-sm font-medium text-white gap-2 group-hover:brightness-105 group-hover:scale-[1.02] group-hover:shadow-lg group-hover:shadow-[#6CB2E3]/30 transition-all duration-300">
+        <span className="relative z-10 inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-gradient-to-r from-[#6CB2E3] to-[#9984BD] px-7 text-sm font-medium text-white gap-2 group-hover:brightness-105 group-hover:scale-[1.02] group-hover:shadow-lg group-hover:shadow-[#6CB2E3]/30 transition-all duration-300">
           {primaryTitle}
           <ArrowRight className="size-4 group-hover:translate-x-1 transition-transform duration-200" />
         </span>

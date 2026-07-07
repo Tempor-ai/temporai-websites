@@ -58,8 +58,8 @@
 }
 
 @layer components {
-  .gradient-heading {
-    @apply text-[max(40px,min(1vw,20px))] md:text-[max(48px,min(5vw,76px))] font-extrabold leading-[1] tracking-[-0.05em] bg-gradient-to-br from-45% from-[#6CB2E3] to-[#9984BD] bg-clip-text text-transparent text-center;
+  .hero-heading {
+    @apply text-[max(44px,min(1vw,22px))] md:text-[max(56px,min(6vw,92px))] font-extrabold leading-[1] tracking-[-0.05em] text-[#215D8A] text-center;
   }
   .page-container {
     @apply px-4 mx-auto  max-w-[1200px];
