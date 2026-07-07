@@ -27,8 +27,8 @@ const CTAPair = ({
         onClick={primaryOnClick}
         className="relative inline-flex h-12 w-full sm:w-60 overflow-hidden rounded-lg p-[1px] focus:outline-none group"
       >
-        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3B82F6_0%,#60A5FA_50%,#3B82F6_100%)]" />
-        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-black/80 px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2 group-hover:bg-black/90 group-hover:scale-[1.02] group-hover:shadow-lg group-hover:shadow-blue-500/30 transition-all duration-300">
+        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#6CB2E3_0%,#9984BD_50%,#6CB2E3_100%)]" />
+        <span className="relative z-10 inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-gradient-to-r from-[#6CB2E3] to-[#9984BD] px-7 text-sm font-medium text-white gap-2 group-hover:brightness-105 group-hover:scale-[1.02] group-hover:shadow-lg group-hover:shadow-[#6CB2E3]/30 transition-all duration-300">
           {primaryTitle}
           <ArrowRight className="size-4 group-hover:translate-x-1 transition-transform duration-200" />
         </span>
@@ -39,8 +39,8 @@ const CTAPair = ({
         onClick={secondaryOnClick}
         className="relative inline-flex h-12 w-full sm:w-60 overflow-hidden rounded-lg focus:outline-none group"
       >
-        <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-white/10 via-white/5 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        <span className="relative inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-white/5 px-7 text-sm font-medium text-white/90 hover:text-white backdrop-blur-3xl border border-white/20 hover:border-white/40 transition-all duration-300 group-hover:bg-white/10 group-hover:scale-[1.02] group-hover:shadow-lg group-hover:shadow-blue-500/20">
+        <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-[#22303F]/5 via-[#22303F]/[0.03] to-[#22303F]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <span className="relative inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-white/60 px-7 text-sm font-medium text-[#22303F]/90 hover:text-[#22303F] backdrop-blur-3xl border border-[#22303F]/20 hover:border-[#22303F]/35 transition-all duration-300 group-hover:bg-white group-hover:scale-[1.02] group-hover:shadow-lg group-hover:shadow-[#22303F]/10">
           {secondaryTitle}
         </span>
       </button>

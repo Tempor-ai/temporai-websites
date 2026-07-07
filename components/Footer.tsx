@@ -5,7 +5,7 @@ import CTAPair from "./shared/CTAPair";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-20 bg-black">
+    <footer className="w-full py-20">
       <div className="page-container">
         {/* CTA Section */}
         <SectionHeading
@@ -27,7 +27,7 @@ const Footer = () => {
         />
 
         {/* Copyright */}
-        <div className="mt-16 pt-8 border-t border-white/10">
+        <div className="mt-16 pt-8 border-t border-[#22303F]/10">
           <p className="text-xs text-secondary-foreground text-center">
             © 2025 Temporai Solutions
           </p>
