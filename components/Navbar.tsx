@@ -16,15 +16,17 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 hero-gradient backdrop-blur-xl border-b border-[#22303F]/10 shadow-sm">
-      <div className="page-container">
-        <div className="flex items-center justify-between h-20">
+      {/* Full-width container (no max-w centering) so the logo hugs the left
+          edge with a small fixed gap on any monitor width. */}
+      <div className="px-4 sm:px-6">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <div className="flex items-center">
             <a
               href="#"
               className="hover:opacity-80 transition-opacity duration-200"
             >
-              <Logo size="sm" />
+              <Logo size="nav" className="scale-x-110 origin-left" />
             </a>
           </div>
 
@@ -32,25 +34,25 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-10">
             <a
               href="#features"
-              className="text-[#22303F]/80 hover:text-[#22303F] transition-all duration-200 font-medium text-sm tracking-wide hover:scale-105"
+              className="text-[#22303F]/80 hover:text-[#22303F] transition-all duration-200 font-medium text-sm hover:scale-105"
             >
               Features
             </a>
             <a
               href="#how-it-works"
-              className="text-[#22303F]/80 hover:text-[#22303F] transition-all duration-200 font-medium text-sm tracking-wide hover:scale-105"
+              className="text-[#22303F]/80 hover:text-[#22303F] transition-all duration-200 font-medium text-sm hover:scale-105"
             >
               How it Works
             </a>
             <a
               href="#product-spotlight"
-              className="text-[#22303F]/80 hover:text-[#22303F] transition-all duration-200 font-medium text-sm tracking-wide hover:scale-105"
+              className="text-[#22303F]/80 hover:text-[#22303F] transition-all duration-200 font-medium text-sm hover:scale-105"
             >
               Approach
             </a>
             <a
               href="#pilot-case-study"
-              className="text-[#22303F]/80 hover:text-[#22303F] transition-all duration-200 font-medium text-sm tracking-wide hover:scale-105"
+              className="text-[#22303F]/80 hover:text-[#22303F] transition-all duration-200 font-medium text-sm hover:scale-105"
             >
               Case Studies
             </a>

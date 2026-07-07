@@ -69,9 +69,6 @@ export function ProductSpotlightSection() {
       whileInView="show"
       viewport={{ once: true }}
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgba(76,102,138,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(76,102,138,0.1)_1px,transparent_1px)] opacity-20 [background-size:6rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,transparent_70%,#000_110%)]" />
-
       <motion.div
         className="absolute right-[-120px] top-[-20%] h-[300px] w-[300px] rounded-full bg-[radial-gradient(circle_at_center,#9984BD_20%,transparent_50%)] opacity-[0.12] blur-3xl pointer-events-none z-[-1]"
         animate={{

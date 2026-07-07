@@ -45,7 +45,6 @@ export function FeaturesSectionContainer() {
         title="Why Temporai Solutions?"
         subTitle="Four pillars that make AI‑assisted delivery practical."
       />
-      <div className="absolute bottom-0 -z-10 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4c668a2e_1px,transparent_1px),linear-gradient(to_bottom,#4c668a0a_1px,transparent_1px)] [background-size:6rem_4rem]"></div>
       <motion.div
         className="absolute left-[-120px] top-[-20%] h-[400px] w-[400px] rounded-full bg-[radial-gradient(circle_at_center,#6CB2E3_40%,transparent_50%)] opacity-[0.15] blur-3xl pointer-events-none z-[-1]"
         animate={{

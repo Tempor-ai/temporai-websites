@@ -63,6 +63,22 @@ export default function AgentSwarm({ className = "" }: AgentSwarmProps) {
     const pairs = new Int16Array(pairList);
     const PAIRC = pairs.length / 2;
 
+    // ---------- entrance choreography ----------
+    // Nodes pop in first in scattered spurts, then the edges draw
+    // themselves between already-born nodes. After ~2.3s everything is at
+    // steady state and these factors all clamp to 1.
+    const birth = new Float32Array(N); // ms after mount each node pops
+    for (let i = 0; i < N; i++) birth[i] = 80 + rand() * 550;
+    const edgeBirth = new Float32Array(PAIRC); // ms each edge starts drawing
+    for (let p = 0; p < PAIRC; p++) edgeBirth[p] = 550 + rand() * 650;
+    const nu = new Float32Array(N); // per-frame node "born" factor 0..1
+    const t0 = performance.now();
+    const easeOutBack = (u: number) => {
+      const k = 1.70158;
+      const v = u - 1;
+      return 1 + (k + 1) * v * v * v + k * v * v;
+    };
+
     // per-node wander phase/frequency (cheap organic drift, no noise lib)
     const wf1 = new Float32Array(N);
     const wf2 = new Float32Array(N);
@@ -80,14 +96,25 @@ export default function AgentSwarm({ className = "" }: AgentSwarmProps) {
     }
     const WANDER = 0.16; // amplitude, in sphere-radius units
 
-    // ---------- palette: brand blue -> purple, mapped left-to-right ----------
+    // ---------- palette: blue -> purple -> silver, mapped left-to-right,
+    // echoing the page's own progression (blue headline, purple accents,
+    // silver subtext) ----------
     const PAL_STEPS = 32;
+    // Slightly darkened variants of the brand stops so the cloud holds its
+    // own against the pastel background instead of fading into it.
+    const STOPS: [number, number, number][] = [
+      [70, 148, 208], // brand blue, deepened
+      [122, 99, 164], // brand purple, deepened
+      [118, 131, 146], // silver, deepened
+    ];
     const pal: string[] = new Array(PAL_STEPS);
     for (let i = 0; i < PAL_STEPS; i++) {
-      const t = i / (PAL_STEPS - 1);
-      const r = Math.round(65 + (148 - 65) * t);
-      const g = Math.round(200 + (131 - 200) * t);
-      const b = Math.round(245 + (182 - 245) * t);
+      const t = (i / (PAL_STEPS - 1)) * (STOPS.length - 1);
+      const s = Math.min(Math.floor(t), STOPS.length - 2);
+      const f = t - s;
+      const r = Math.round(STOPS[s][0] + (STOPS[s + 1][0] - STOPS[s][0]) * f);
+      const g = Math.round(STOPS[s][1] + (STOPS[s + 1][1] - STOPS[s][1]) * f);
+      const b = Math.round(STOPS[s][2] + (STOPS[s + 1][2] - STOPS[s][2]) * f);
       pal[i] = `rgb(${r},${g},${b})`;
     }
 
@@ -105,7 +132,8 @@ export default function AgentSwarm({ className = "" }: AgentSwarmProps) {
       H = 0,
       CX = 0,
       CY = 0,
-      R = 0;
+      R = 0,
+      SCL = 1;
 
     function resize() {
       if (!canvas || !ctx) return;
@@ -118,17 +146,32 @@ export default function AgentSwarm({ className = "" }: AgentSwarmProps) {
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       CX = W * 0.5;
       CY = H * 0.5;
-      R = Math.min(W, H) * 0.42;
+      // Modest radius so the whole cloud (incl. wander + cursor repel
+      // excursions) stays inside the canvas instead of clipping at edges.
+      R = Math.min(W, H) * 0.38;
+      // Mark weight scales with the cloud so dots/lines keep the same
+      // visual density on the big desktop canvas as on the small mobile
+      // one (~170 is the mobile-baseline radius).
+      SCL = Math.max(1, R / 170);
     }
     resize();
     window.addEventListener("resize", resize);
+    // The entrance animation scales the wrapper (0.97 -> 1), so the rect
+    // measured at mount is ~3% smaller than the settled layout. Re-measure
+    // whenever the element's size changes, not just on window resize.
+    const ro = new ResizeObserver(resize);
+    if (canvas.parentElement) ro.observe(canvas.parentElement);
 
     let mx = -1e4;
     let my = -1e4;
     const onPointerMove = (e: PointerEvent) => {
+      // Map cursor from CSS pixels into the canvas drawing space. When the
+      // two diverge (e.g. mid-entrance-animation transform), a raw offset
+      // lands the hotspot below-right of the cursor.
       const rect = canvas.getBoundingClientRect();
-      mx = e.clientX - rect.left;
-      my = e.clientY - rect.top;
+      if (rect.width === 0 || rect.height === 0) return;
+      mx = (e.clientX - rect.left) * (W / rect.width);
+      my = (e.clientY - rect.top) * (H / rect.height);
     };
     const onLeaveOrBlur = () => {
       mx = -1e4;
@@ -151,6 +194,7 @@ export default function AgentSwarm({ className = "" }: AgentSwarmProps) {
       tPrev = now;
 
       const t = now * 0.001;
+      const elapsed = now - t0;
       rotY += (prefersReducedMotion ? 0.0002 : 0.0012) * dt;
 
       const cY = Math.cos(rotY),
@@ -210,23 +254,37 @@ export default function AgentSwarm({ className = "" }: AgentSwarmProps) {
 
         sx[i] = px + ox[i];
         sy[i] = py + oy[i];
+
+        // entrance: how "born" this node is (0 = not yet, 1 = settled)
+        nu[i] = prefersReducedMotion
+          ? 1
+          : Math.min(1, Math.max(0, (elapsed - birth[i]) / 320));
       }
 
       ctx.clearRect(0, 0, W, H);
-      ctx.lineWidth = 1;
+      ctx.lineWidth = SCL;
 
       const invW = 1 / (2 * R);
       const LB2 = IR2;
       for (let p = 0; p < PAIRC; p++) {
         const a = pairs[p * 2],
           b = pairs[p * 2 + 1];
+
+        // entrance: edges draw themselves in after both endpoints are born
+        const g = prefersReducedMotion
+          ? 1
+          : Math.min(1, Math.max(0, (elapsed - edgeBirth[p]) / 380));
+        if (g <= 0) continue;
+        const born = Math.min(nu[a], nu[b]);
+        if (born <= 0) continue;
+
         const ax = sx[a],
           ay = sy[a],
           bx2 = sx[b],
           by2 = sy[b];
 
         const dep = (pt[a] + pt[b]) * 0.5;
-        let alpha = 0.05 + 0.2 * dep * dep;
+        let alpha = (0.05 + 0.2 * dep * dep) * g * born;
 
         const mpx = (ax + bx2) * 0.5,
           mpy = (ay + by2) * 0.5;
@@ -235,7 +293,7 @@ export default function AgentSwarm({ className = "" }: AgentSwarmProps) {
         const md2 = mdx * mdx + mdy * mdy;
         if (md2 < LB2) {
           const f = 1 - Math.sqrt(md2) / IR;
-          alpha += f * f * 0.35;
+          alpha += f * f * 0.35 * g;
         }
         if (alpha < 0.03) continue;
 
@@ -247,16 +305,21 @@ export default function AgentSwarm({ className = "" }: AgentSwarmProps) {
         ctx.strokeStyle = pal[ci];
         ctx.beginPath();
         ctx.moveTo(ax, ay);
-        ctx.lineTo(bx2, by2);
+        // grow the line from endpoint A toward B while entering
+        ctx.lineTo(ax + (bx2 - ax) * g, ay + (by2 - ay) * g);
         ctx.stroke();
       }
 
       const TAU = Math.PI * 2;
       for (let i = 0; i < N; i++) {
+        const u = nu[i];
+        if (u <= 0) continue;
         const depth = pt[i];
-        let al = 0.4 + 0.55 * depth + gb[i] * 0.25;
+        let al = (0.4 + 0.55 * depth + gb[i] * 0.25) * u;
         if (al > 1) al = 1;
-        const rad = (1.6 + 2.2 * depth) * (1 + gb[i] * 0.4);
+        // pop in with a slight overshoot, then settle
+        const rad =
+          (1.6 + 2.2 * depth) * (1 + gb[i] * 0.4) * easeOutBack(u) * SCL;
 
         let k = ((sx[i] - (CX - R)) * invW * (PAL_STEPS - 1)) | 0;
         if (k < 0) k = 0;
@@ -278,6 +341,7 @@ export default function AgentSwarm({ className = "" }: AgentSwarmProps) {
     return () => {
       cancelAnimationFrame(rafId);
       window.removeEventListener("resize", resize);
+      ro.disconnect();
       window.removeEventListener("pointermove", onPointerMove);
       window.removeEventListener("blur", onLeaveOrBlur);
       document.documentElement.removeEventListener("mouseleave", onLeaveOrBlur);
@@ -288,7 +352,11 @@ export default function AgentSwarm({ className = "" }: AgentSwarmProps) {
     <canvas
       ref={canvasRef}
       aria-hidden="true"
-      className={`pointer-events-none ${className}`}
+      // w-full/h-full are load-bearing: a canvas is a replaced element, so
+      // inset-0 alone does NOT stretch it — without explicit CSS size it
+      // renders at its backing-store size (CSS size × devicePixelRatio) and
+      // overflows its box on HiDPI screens.
+      className={`pointer-events-none w-full h-full ${className}`}
     />
   );
 }

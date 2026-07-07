@@ -74,9 +74,6 @@ export function HowItWorksSection() {
       whileInView="show"
       viewport={{ once: true }}
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgba(76,102,138,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(76,102,138,0.05)_1px,transparent_1px)] opacity-10 [background-size:6rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,transparent_70%,#000_110%)]" />
-
       <div className="page-container">
         <SectionHeading
           tag="How it works"

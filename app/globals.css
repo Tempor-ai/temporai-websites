@@ -59,7 +59,7 @@
 
 @layer components {
   .hero-heading {
-    @apply text-[max(44px,min(1vw,22px))] md:text-[max(56px,min(6vw,92px))] font-extrabold leading-[1] tracking-[-0.05em] text-[#215D8A] text-center;
+    @apply text-[max(40px,min(1vw,20px))] md:text-[max(48px,min(4.5vw,68px))] font-extrabold leading-[1.05] tracking-[-0.04em] text-[#266CAD] text-center;
   }
   .page-container {
     @apply px-4 mx-auto  max-w-[1200px];
@@ -86,8 +86,13 @@
     @apply p-10 border border-[#222222]/10 rounded-3xl shadow-secondary shadow-md max-w-xs w-full;
   }
 
-  /* Hero-only pastel gradient — the archived brand's original light background */
+  /* Pastel brand gradient, shared by the navbar and hero. Pure horizontal
+     (90deg) on purpose: a diagonal gradient's color at a given point depends
+     on the element's own height, so a short navbar and a tall hero paint
+     different colors at the same x-position and the seam between them
+     shows. A horizontal gradient's color only depends on x, so as long as
+     both elements span the same width, they read as one continuous field. */
   .hero-gradient {
-    background: linear-gradient(135deg, #C4E1F4 0%, #D1D4E9 100%);
+    background: linear-gradient(90deg, #C4E1F4 0%, #D1D4E9 100%);
   }
 }
