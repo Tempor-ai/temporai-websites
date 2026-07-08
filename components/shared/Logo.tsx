@@ -12,7 +12,10 @@ const Logo = ({ className = "", size = "md" }: LogoProps) => {
   const heightClasses = {
     sm: "h-6",
     md: "h-8",
-    nav: "h-10",
+    // The rebuilt logo file is cropped tight to the glyphs (the old file had
+    // ~40% empty margin baked in), so the box is smaller for the same
+    // visible wordmark size.
+    nav: "h-7",
     lg: "h-12",
     xl: "h-16",
     "2xl": "h-28",
