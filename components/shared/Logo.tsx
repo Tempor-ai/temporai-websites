@@ -26,10 +26,13 @@ const Logo = ({ className = "", size = "md" }: LogoProps) => {
       <Image
         src="/logo.png"
         alt="Temporai Solutions"
-        width={492}
+        width={497}
         height={100}
         className={`w-auto ${heightClasses[size]}`}
         priority
+        // serve the PNG as-is: the optimizer's downscale+q75 recompression
+        // visibly fuzzes the crisp block edges when zoomed
+        unoptimized
       />
     </div>
   );
