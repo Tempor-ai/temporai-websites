@@ -22,8 +22,8 @@ export default function Hero() {
 
   return (
     <div className="relative h-full min-h-[100vh] overflow-hidden hero-gradient">
-      {/* Navbar spacer */}
-      <div className="h-16 sm:h-20"></div>
+      {/* Navbar spacer — keep in sync with the Navbar row height */}
+      <div className="h-14 sm:h-16"></div>
       {/* Wide (but not full-bleed) container: splits the difference between
           the old centered 1200px column and hugging the screen edge. */}
       <div className="max-w-[1600px] mx-auto px-6 sm:px-12 lg:px-20 pb-16 sm:pb-20 pt-8 sm:pt-12 md:pt-16 lg:pt-20">

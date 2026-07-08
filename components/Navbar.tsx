@@ -19,7 +19,7 @@ const Navbar = () => {
       {/* Full-width container (no max-w centering) so the logo hugs the left
           edge with a small fixed gap on any monitor width. */}
       <div className="px-4 sm:px-6">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
           <div className="flex items-center">
             <a
