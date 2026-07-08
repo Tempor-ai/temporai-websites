@@ -15,7 +15,7 @@ const Logo = ({ className = "", size = "md" }: LogoProps) => {
     // The rebuilt logo file is cropped tight to the glyphs (the old file had
     // ~40% empty margin baked in), so the box is smaller for the same
     // visible wordmark size.
-    nav: "h-7",
+    nav: "h-6",
     lg: "h-12",
     xl: "h-16",
     "2xl": "h-28",
