@@ -26,7 +26,8 @@ const Navbar = () => {
               href="#"
               className="hover:opacity-80 transition-opacity duration-200"
             >
-              <Logo size="nav" className="scale-x-110 origin-left" />
+              {/* stretch is baked into the logo file now (V7: +12%) */}
+              <Logo size="nav" />
             </a>
           </div>
 

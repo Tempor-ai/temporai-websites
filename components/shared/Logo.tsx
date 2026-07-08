@@ -23,7 +23,7 @@ const Logo = ({ className = "", size = "md" }: LogoProps) => {
       <Image
         src="/logo.png"
         alt="Temporai Solutions"
-        width={300}
+        width={492}
         height={100}
         className={`w-auto ${heightClasses[size]}`}
         priority
