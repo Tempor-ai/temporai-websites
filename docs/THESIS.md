@@ -57,7 +57,12 @@ real usage, audit trails — and at the strongest end, answers that are
 *cryptographically verifiable* (our platform 0Gora generates every answer
 inside a hardware TEE and verifies it on-chain — live, in public, today).
 We build AI deliverables as **diligence artifacts**: things you can show, not
-just say.
+just say. The same hardware does double duty for **privacy**: inference
+inside a TEE means your prompts and data are invisible even to the compute
+provider — security you can verify, not compliance paperwork you have to
+trust. Enterprise procurement is already moving this way: TEE isolation for
+sensitive AI data is projected to go from a niche requirement (<15% in 2024)
+to the default (>60% by 2026).
 
 ### 3 · The agent web — your next user is an agent
 
@@ -116,8 +121,9 @@ shrink the bill while doing it.
    quality parity (proven per-component, not vibes), and keep frontier only
    where it earns its price. Savings of 90–98% on migrated components —
    with TEE-verified serving available where trust matters (0G's verified
-   compute currently prices *below* the mainstream OSS hosts, so proof
-   doesn't cost extra). Measurable enough to support gainshare terms: our fee comes out of the savings, so
+   compute currently prices *below* mainstream OSS hosts like Baseten,
+   Together, and Fireworks — whose security is certifications and contracts,
+   not cryptography — so going trustless doesn't cost extra). Measurable enough to support gainshare terms: our fee comes out of the savings, so
    your net bill only goes down.
 
 5. **Fractional AI Lead** *(the back end)* — senior AI capability plus an
@@ -197,6 +203,8 @@ comes out of measured savings, so the client's net bill only goes down.
 - Same quality. 2% of the cost. Cryptographically verifiable.
 - Your AI bill should be falling, not exploding.
 - Frontier prices for non-frontier work — that's what we remove.
+- Go AI without handing your data to anyone — hardware-secured, verifiable.
+- Trust no one. Verify everything. Pay less doing it.
 
 ---
 

@@ -74,3 +74,34 @@ Consistent with our own DR HIRO result: GLM-5.1-FP8 on 0G at $0.39 vs Sonnet 4.6
 - **"98% savings" is workload-specific** — it held for schema-constrained harness calls; long-horizon agentic work may still need frontier, so blended savings are lower.
 - **OpenRouter has no public SLA** and its ~5.5% platform fee is real; ZDR depends on downstream providers honoring policy (contractual, not cryptographic — unlike 0G's TEE).
 - Frontier vendors are **raising** prices (GPT-5.5 2x jump) while OSS vendors cut them (DeepSeek V4 Pro's June cut) — the gap is widening, but promo prices (Qwen 35% off) can snap back.
+
+---
+
+## Addendum (2026-07-09): Baseten and the three trust models
+
+**Baseten profile.** Performance-focused centralized inference platform:
+dedicated GPU deployments billed per active minute (e.g., H100 80GB
+~$0.108/min, scale-to-zero idle), SOC 2 Type II + HIPAA + GDPR, no default
+storage of model inputs/outputs, per-customer GPU/namespace isolation, and
+BYOC/self-hosted options at enterprise tier. Strong for high-volume fixed
+models where throughput and SLAs matter. **No TEE / confidential-computing
+attestation product** — security is contractual and operational, not
+cryptographic. Sources: [Baseten security docs](https://docs.baseten.co/observability/security),
+[pricing](https://www.baseten.co/pricing/), [costbench 2026](https://costbench.com/software/ai-model-hosting/baseten/),
+[self-hosted](https://www.baseten.co/deployments/baseten-self-hosted/).
+
+**The three trust models for client inference** (the security play's frame):
+
+| Tier | Trust model | Providers | What the client gets |
+|---|---|---|---|
+| Compliance-trust | "Trust us" — certifications + contracts | Baseten, Together, Fireworks, DeepInfra, OpenRouter (ZDR) | SOC 2/HIPAA paperwork, no-logging promises. Cheap, fast, broad. Provider *could* see data; you trust that it doesn't. |
+| Confidential cloud | "Trust the hardware, run it yourself" | Azure/GCP confidential GPU VMs (H100 CC) | TEE isolation, but DIY: you build, attest, and operate it. |
+| Attested inference | "Trust no one, verify everything" | **0G (TeeML)**, specialist TEE-inference startups | Per-response hardware attestation; prompts/outputs invisible even to the compute operator; verifiable artifact per call. 0G currently prices *below* mainstream OSS hosts. |
+
+**Market pull:** enterprise TEE requirements for sensitive AI data are
+projected to jump from <15% (2024) to >60% (2026) of deployments
+([2026 TEE guide](https://devsecopsschool.com/blog/trusted-execution-environment/)) —
+i.e., the attested tier is becoming a procurement checkbox, not a crypto
+curiosity. This is where the shop's crypto/TEE background converts directly
+into a differentiated service: most cost-optimization vendors can only offer
+tier 1; we can deliver tier 3 at tier-1 prices.
