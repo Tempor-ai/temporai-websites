@@ -43,6 +43,30 @@ frontier-scale open models live (GLM-5 744B), pricing *below* mainstream
 OSS hosts — and it's the only stack where verified compute, storage, and
 data availability are one system (our 0Gora platform uses all of it).
 
+**The promise economy — frontier labs included.** Enterprise tiers from
+Anthropic, OpenAI, Google, and xAI (zero-data-retention options,
+no-training commitments, SOC 2, HIPAA BAAs) are all *contractual*: the
+plaintext still decrypts on their servers, and the commitment is legal,
+not physical. The proof that paperwork bends: in *NYT v. OpenAI*, a US
+court ordered OpenAI to preserve ChatGPT logs — including user-deleted
+chats — overriding OpenAI's own privacy policy and objections, with
+enterprise/ZDR carve-outs arriving only after pushback. A provider promise
+is only as strong as the next subpoena, policy change, or acquisition.
+No frontier lab sells per-response attested inference today (Apple's
+Private Cloud Compute is the closest mainstream analogue — and it isn't a
+purchasable API). The attested tier belongs to open models on TEE infra.
+
+**Cost honesty on the verified tier.** 0G is the cheapest *verified* way
+to run frontier-scale open models (GLM-5 744B at ~$0.60/$1.92 per M —
+below even unverified Together/Fireworks at ~$1.00/$3.20). NEAR prices
+its smaller TEE catalog aggressively in USD (DeepSeek-V4-Flash
+$0.17/$0.35). Verification carries no price premium on either. The
+absolute cheapest per token is usually the *unverified* tier
+(DeepInfra, Chutes) — the trap tier. Public claim discipline: "cheapest
+in class for the big open models we deploy, verified at no premium — and
+we benchmark your workload before we claim your number." Note 0G's
+token-denominated pricing floats with the OG price.
+
 Honest limits (say them before the client does): TEE shifts trust to the
 chipmakers; the TEE.fail attack (Oct 2025) showed physical-access
 compromise is possible. The credible posture is defense-in-depth — TEE for
