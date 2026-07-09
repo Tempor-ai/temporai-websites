@@ -24,6 +24,7 @@ evolution. Start with the thesis; plans and research support it.
 | [research/market-positioning.md](research/market-positioning.md) | 2025–26 market scan: AI dev shop landscape, AI-as-investor-signal evidence, MCP/A2A momentum, differentiation whitespace. Sourced. |
 | [research/cost-minimization-evidence.md](research/cost-minimization-evidence.md) | Evidence for the cost-optimization offering: internal frontier-vs-open-model benchmark (98% savings at quality parity) + the usage-based pricing-shock context. |
 | [research/inference-routing.md](research/inference-routing.md) | 0G vs OpenRouter vs the OSS-inference field: pricing, verifiability, quality parity — and the routing decision framework for cost engagements. |
+| [research/verifiable-compute-landscape.md](research/verifiable-compute-landscape.md) | Why TEE (plain-language explainer), the verifiable/DePIN compute matrix (0G, NEAR AI, Akash, Phala, …), ZK vs TEE verdict, sovereign-AI trend evidence, and the strategic read for building on 0G. |
 
 ## Conventions
 

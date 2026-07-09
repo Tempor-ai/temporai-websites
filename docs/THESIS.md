@@ -74,7 +74,7 @@ agent-ready — a typed, safe, published tool surface over what you already
 have — is one of the highest-leverage moves a product team can make right
 now, and one of the cheapest.
 
-### 4 · The bill — the AI bill is the new cloud bill
+### 4 · Sovereignty — the AI bill is the new cloud bill, and the leash is real
 
 Usage-based pricing ended the era of subsidized flat-rate AI — and frontier
 prices are moving the wrong way (GPT-5-class input pricing rose ~8× in the
@@ -88,6 +88,14 @@ production financial-reasoning component, ran faster, and cost **98% less**
 ($0.39 vs $19.52 per 1,000 calls). Most AI bills are paying frontier prices
 for work that doesn't need frontier models. We find those components,
 prove the parity, and cut the bill — verifiably.
+
+And it's not only the bill — it's the leash. Building everything on one
+frontier vendor means living at the mercy of their prices, their rate
+limits, their deprecations, and their uptime. Open models on open compute
+mean **you own your AI**: nobody can raise the price of what you run
+yourself, deprecate the model your product depends on, or throttle you in
+a capacity crunch. Sovereign AI — with TEE-verified serving so
+independence doesn't mean flying blind.
 
 ## What we do
 
@@ -123,7 +131,10 @@ shrink the bill while doing it.
    with TEE-verified serving available where trust matters (0G's verified
    compute currently prices *below* mainstream OSS hosts like Baseten,
    Together, and Fireworks — whose security is certifications and contracts,
-   not cryptography — so going trustless doesn't cost extra). Measurable enough to support gainshare terms: our fee comes out of the savings, so
+   not cryptography — so going trustless doesn't cost extra). And beyond
+   routing, we build complete solutions *on top of* verified decentralized
+   compute — inference services, RAG platforms, agents — the way we build
+   our own products on 0G. Measurable enough to support gainshare terms: our fee comes out of the savings, so
    your net bill only goes down.
 
 5. **Fractional AI Lead** *(the back end)* — senior AI capability plus an
@@ -205,6 +216,8 @@ comes out of measured savings, so the client's net bill only goes down.
 - Frontier prices for non-frontier work — that's what we remove.
 - Go AI without handing your data to anyone — hardware-secured, verifiable.
 - Trust no one. Verify everything. Pay less doing it.
+- Own your AI — nobody can raise the price of what you run yourself.
+- Off the frontier leash: no vendor's pricing, rate limits, or roadmap between you and your AI.
 
 ---
 
