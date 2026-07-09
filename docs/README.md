@@ -25,6 +25,7 @@ evolution. Start with the thesis; plans and research support it.
 | [research/cost-minimization-evidence.md](research/cost-minimization-evidence.md) | Evidence for the cost-optimization offering: internal frontier-vs-open-model benchmark (98% savings at quality parity) + the usage-based pricing-shock context. |
 | [research/inference-routing.md](research/inference-routing.md) | 0G vs OpenRouter vs the OSS-inference field: pricing, verifiability, quality parity — and the routing decision framework for cost engagements. |
 | [research/verifiable-compute-landscape.md](research/verifiable-compute-landscape.md) | Why TEE (plain-language explainer), the verifiable/DePIN compute matrix (0G, NEAR AI, Akash, Phala, …), ZK vs TEE verdict, sovereign-AI trend evidence, and the strategic read for building on 0G. |
+| [research/pricing-parity-audit-2026-07.md](research/pricing-parity-audit-2026-07.md) | **Adversarial audit** of the 0G-pricing and quality-parity claims (3 refutation agents + live mainnet query): corrected price table, FX mechanism, parity boundary, and the claim-discipline rules. Canonical over earlier price figures. |
 
 ## Conventions
 

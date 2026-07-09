@@ -127,11 +127,12 @@ shrink the bill while doing it.
    whose bill is exploding: we benchmark your harness component by
    component, route what doesn't need frontier models to open models at
    quality parity (proven per-component, not vibes), and keep frontier only
-   where it earns its price. Savings of 90–98% on migrated components —
-   with TEE-verified serving available where trust matters (0G's verified
-   compute currently prices *below* mainstream OSS hosts like Baseten,
-   Together, and Fireworks — whose security is certifications and contracts,
-   not cryptography — so going trustless doesn't cost extra). And beyond
+   where it earns its price. Roughly 90% realized savings on parity-class
+   components (up to 98% on our benchmarked component) — with TEE-verified
+   serving available where trust matters: 0G is the cheapest *attested*
+   option for GLM-5-class models, priced at or near the open-market floor,
+   while mainstream hosts like Baseten, Together, and Fireworks offer only
+   certifications and contracts, not cryptography. And beyond
    routing, we build complete solutions *on top of* verified decentralized
    compute — inference services, RAG platforms, agents — the way we build
    our own products on 0G. Measurable enough to support gainshare terms: our fee comes out of the savings, so
@@ -170,7 +171,7 @@ shrink the bill while doing it.
 | Agent-enablement (MCP/A2A) | Dual-transport MCP server in production; A2A-native agent framework (NodeAI); scaffolding packages |
 | Knowledge systems that cite their sources | Hybrid-retrieval RAG with inline citations, multi-tenant hosting; a private-corpus assistant deployed as a config overlay, not a fork |
 | Full-lifecycle shipping | AWS ECS with CI/CD and rollback runbooks; EC2/Docker/TLS deployments; release discipline (tagged versions, changelogs, deploy monitoring) |
-| 90–98% cheaper AI at proven quality parity | DR HIRO brain benchmark: open model on 0G matched Claude Sonnet's 100% schema-pass quality, faster p95, 98% lower cost — $0.39 vs $19.52 per 1,000 calls; 0Gora runs wholly on TEE-verified open models |
+| ~90% cheaper AI at proven quality parity (98% on our benchmarked component) | DR HIRO brain benchmark: open model on 0G matched Claude Sonnet's 100% schema-pass quality, faster p95, 98% lower cost — $0.39 vs $19.52 per 1,000 calls; 0Gora runs wholly on TEE-verified open models; claims adversarially audited (docs/research/pricing-parity-audit-2026-07.md) |
 | We run on what we sell | This site — and the process that built it — is agent-made under human direction |
 
 ## How we work

@@ -56,16 +56,19 @@ No frontier lab sells per-response attested inference today (Apple's
 Private Cloud Compute is the closest mainstream analogue — and it isn't a
 purchasable API). The attested tier belongs to open models on TEE infra.
 
-**Cost honesty on the verified tier.** 0G is the cheapest *verified* way
-to run frontier-scale open models (GLM-5 744B at ~$0.60/$1.92 per M —
-below even unverified Together/Fireworks at ~$1.00/$3.20). NEAR prices
-its smaller TEE catalog aggressively in USD (DeepSeek-V4-Flash
-$0.17/$0.35). Verification carries no price premium on either. The
-absolute cheapest per token is usually the *unverified* tier
-(DeepInfra, Chutes) — the trap tier. Public claim discipline: "cheapest
-in class for the big open models we deploy, verified at no premium — and
-we benchmark your workload before we claim your number." Note 0G's
-token-denominated pricing floats with the OG price.
+**Cost honesty on the verified tier** *(adversarially audited 2026-07-09 —
+see `pricing-parity-audit-2026-07.md`)*. 0G is the cheapest *verified* way
+to run frontier-scale open models — GLM-5-FP8 live at ≈$0.76/$2.43 per M
+(≤32k tier $0.51/$2.29) vs NEAR's GLM-5.1 at $0.85/$3.30 and Phala's
+GLM-5.2 at $1.40 in. That is at-or-near the unverified floor
+(Z.ai-via-OpenRouter GLM-5: $0.60/$1.92) — a 0–26% attestation premium
+depending on tier and OG FX, not zero but small. The absolute cheapest
+per token is the *unverified* tier (DeepSeek first-party V4-Pro
+$0.435/$0.87 promo; DeepInfra FP4) — the trap tier for anyone who needs
+verifiability. Claim discipline: "cheapest **verified** serving, at or
+near the open-market floor — and we benchmark your workload before we
+claim your number." 0G quotes must be dated: pricing is OG-denominated
+and drifts with the token (2026 range $1.17→$0.19).
 
 Honest limits (say them before the client does): TEE shifts trust to the
 chipmakers; the TEE.fail attack (Oct 2025) showed physical-access

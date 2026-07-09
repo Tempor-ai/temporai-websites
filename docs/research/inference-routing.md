@@ -30,7 +30,7 @@ Decentralized GPU/inference marketplace on the 0G chain. **Six models live on ma
 
 **Payments.** Prepaid OG-token ledger with **smart-contract escrow** (funds release on service delivery) and ZK-proof settlement; pricing is market-driven in OG, so USD cost floats with the token ([0G docs](https://docs.0g.ai/concepts/compute)).
 
-**Cost.** GLM-5: **1 OG in / 3.2 OG out ≈ $0.60 / $1.92 per M** at ~$0.60/OG — undercutting Together/Fireworks ($1.00/$3.20) and TEE-competitor Phala ($1.20/$3.50) *while adding* attestation ([0G blog](https://0g.ai/blog/glm-5-live-on-0g-compute)).
+**Cost.** GLM-5-FP8: priced in OG tokens; **live 2026-07-09: 3.83/12.27 OG ≈ $0.76/$2.43 per M** at OG $0.198 (≤32k tier: $0.51/$2.29) — at or near the unverified floor (Z.ai-via-OpenRouter $0.60/$1.92) and the **cheapest attested option** (NEAR GLM-5.1 $0.85/$3.30, Phala GLM-5.2 $1.40 in). ⚠️ The blog-era "$0.60/$1.92" was an OG=$0.60 snapshot; USD price drifts with OG FX. See `pricing-parity-audit-2026-07.md` — adversarially audited.
 
 **Maturity signals.** Mainnet live, OpenAI-compatible SDK, but: 6-model catalog, token-denominated billing (FX volatility, pendingRefund settlement quirks we've hit ourselves), no SLA/enterprise support org, market-driven price changes. Web3-native positioning: "verifiable AI" for agents, DePIN, on-chain settlement.
 
@@ -96,7 +96,7 @@ cryptographic. Sources: [Baseten security docs](https://docs.baseten.co/observab
 |---|---|---|---|
 | Compliance-trust | "Trust us" — certifications + contracts | Baseten, Together, Fireworks, DeepInfra, OpenRouter (ZDR) | SOC 2/HIPAA paperwork, no-logging promises. Cheap, fast, broad. Provider *could* see data; you trust that it doesn't. |
 | Confidential cloud | "Trust the hardware, run it yourself" | Azure/GCP confidential GPU VMs (H100 CC) | TEE isolation, but DIY: you build, attest, and operate it. |
-| Attested inference | "Trust no one, verify everything" | **0G (TeeML)**, specialist TEE-inference startups | Per-response hardware attestation; prompts/outputs invisible even to the compute operator; verifiable artifact per call. 0G currently prices *below* mainstream OSS hosts. |
+| Attested inference | "Trust no one, verify everything" | **0G (TeeML)**, specialist TEE-inference startups | Per-response hardware attestation; prompts/outputs invisible even to the compute operator; verifiable artifact per call. 0G prices at-or-near the unverified floor and is the cheapest *attested* option (0–26% premium vs floor, OG-FX dependent — see `pricing-parity-audit-2026-07.md`). |
 
 **Market pull:** enterprise TEE requirements for sensitive AI data are
 projected to jump from <15% (2024) to >60% (2026) of deployments

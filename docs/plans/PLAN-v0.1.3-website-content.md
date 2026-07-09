@@ -35,8 +35,8 @@ Four cards, one per thesis (short, punchy; 2×2 on mobile):
 3. **The agent web** — "Your next user is an agent. Products without an agent
    surface (MCP/A2A) will be invisible to them."
 4. **The bill** — "Usage-based pricing shocked the C-suite. Most AI bills pay
-   frontier prices for non-frontier work. We cut 90–98% on the right
-   components — and prove quality held."
+   frontier prices for non-frontier work. We cut ~90% on the right
+   components (98% on our benchmarked best case) — and prove quality held."
 Design note: reuse the existing card style from "What you get"; consider the
 blue→purple→silver gradient order across the three cards.
 
@@ -45,7 +45,7 @@ blue→purple→silver gradient order across the three cards.
   Discovery conversation → **AI-Native Roadmap**; Build & handoff stays;
   add **Agent-Ready Product** card (replace "Works across your stack" —
   its content folds into Build & handoff); add **AI Cost Optimization** card
-  ("Your AI bill, down 90–98% on the right components — benchmarked, not
+  ("Your AI bill, down ~90% on the right components — benchmarked, not
   vibes; gainshare terms available"); add **Fractional AI Lead** card
   (replace "Built to expand" — same spirit, sharper offer).
 - Fix the off-brand rainbow hover glow (GlowingEffect default palette) →
