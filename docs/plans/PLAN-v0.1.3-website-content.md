@@ -1,6 +1,6 @@
 # PLAN — v0.1.3: Website content from the thesis
 
-*Maps THESIS.md onto the live site, section by section. The v0.1.2 design
+*Maps docs/THESIS.md onto the live site, section by section. The v0.1.2 design
 (palette, swarm, layout) stays; this is a copy/content evolution plus one new
 section. Apply on a v0.1.3 branch when approved.*
 
@@ -28,12 +28,15 @@ section. Apply on a v0.1.3 branch when approved.*
 - CTA pair unchanged ("Book a call" / "See the work").
 
 ### NEW — "Why now" thesis strip (new component, after Hero)
-Three cards, one per thesis (short, punchy):
+Four cards, one per thesis (short, punchy; 2×2 on mobile):
 1. **Speed** — "AI-native is a pace, not a feature. The gap compounds monthly."
 2. **Proof** — "Investors, customers, and auditors stopped believing claims.
    We build AI you can prove — down to cryptographically verified answers."
 3. **The agent web** — "Your next user is an agent. Products without an agent
    surface (MCP/A2A) will be invisible to them."
+4. **The bill** — "Usage-based pricing shocked the C-suite. Most AI bills pay
+   frontier prices for non-frontier work. We cut 90–98% on the right
+   components — and prove quality held."
 Design note: reuse the existing card style from "What you get"; consider the
 blue→purple→silver gradient order across the three cards.
 
@@ -41,7 +44,9 @@ blue→purple→silver gradient order across the three cards.
 - Keep grid; retitle cards toward the four offerings:
   Discovery conversation → **AI-Native Roadmap**; Build & handoff stays;
   add **Agent-Ready Product** card (replace "Works across your stack" —
-  its content folds into Build & handoff); add **Fractional AI Lead** card
+  its content folds into Build & handoff); add **AI Cost Optimization** card
+  ("Your AI bill, down 90–98% on the right components — benchmarked, not
+  vibes; gainshare terms available"); add **Fractional AI Lead** card
   (replace "Built to expand" — same spirit, sharper offer).
 - Fix the off-brand rainbow hover glow (GlowingEffect default palette) →
   re-tint to brand blue→purple, or remove. (Kevin flagged; pending decision.)
@@ -77,6 +82,9 @@ blue→purple→silver gradient order across the three cards.
   - NodeAI → the agent framework underneath (A2A/MCP native).
 - Add a 4th card: **This website** — "designed, built, and deployed by agents
   under human direction. We run on what we sell."
+- DR HIRO card (or a small stat strip nearby) carries the cost receipt:
+  "open model matched Claude's quality at 2% of the cost — 98% saved,
+  benchmark-proven" (source: docs/research/cost-minimization-evidence.md).
 
 ### Who it's for (`WhoItsForSection.tsx`)
 - Web3 card sharpened to the fundraise frame: "Raising? A credible,
@@ -87,6 +95,9 @@ blue→purple→silver gradient order across the three cards.
   ecosystem and investor conversations? That's a scoped, productized
   engagement — not a rewrite."
 - DC/policy card stays (auditability DNA is the fit).
+- Weave the two-lane funnel line into the section intro: "Not on AI yet?
+  We take you from zero to AI-native. Already running AI? We unleash it —
+  and usually shrink the bill."
 
 ### Footer CTA (`Footer.tsx`)
 - Goal-first: "Ready to make your team more AI-native? Tell me the goal —
